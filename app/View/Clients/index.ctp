@@ -5,4 +5,3 @@
 <?php
     $this->end();
 ?>
-<h1>Aperçu test CakePHP</h1>
