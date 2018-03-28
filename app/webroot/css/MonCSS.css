@@ -1,0 +1,49 @@
+ html * {
+            margin:auto;
+            box-sizing: border-box;
+        }
+        p {
+            font-size:200%;
+            text-align:center;
+        }
+        header, form {
+            width:60%;
+            margin:auto;
+        }
+        table {
+            border:solid 3px;
+            width:60%;
+            margin:auto;
+        }
+        th {
+            border:solid 3px;           
+        }
+        .centre {
+            text-align:center;
+            margin:auto;    
+        }
+        .box {
+            border:solid 4px;
+            margin-top:30px;
+            margin-bottom:30px;
+            padding-top:30px;
+            padding-bottom:30px;
+        }
+
+        a.lienBouton {
+            height: 24px;
+            width: 120px;
+            display: block;
+            background-color: #DFDFDF;
+            border: 1px outset black;
+            text-decoration: none;
+            color: black;
+            font: 13px Arial;
+            text-align: center;
+            padding-top: 2px;
+        }
+ 
+        a.lienBouton:active {
+         border: 1px inset black;
+        }
+

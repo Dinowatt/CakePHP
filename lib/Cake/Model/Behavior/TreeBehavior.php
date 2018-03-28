@@ -112,12 +112,11 @@ class TreeBehavior extends ModelBehavior {
  * @return void
  */
 	protected function _setChildrenLevel(Model $Model, $id) {
-		$settings = $this->settings[$Model->alias];
+		$settings = $Model->Behaviors->Tree->settings[$Model->alias];
 		$primaryKey = $Model->primaryKey;
 		$depths = array($id => (int)$Model->data[$Model->alias][$settings['level']]);
 
-		$children = $this->children(
-			$Model,
+		$children = $Model->children(
 			$id,
 			false,
 			array($primaryKey, $settings['parent'], $settings['level']),

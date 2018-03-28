@@ -193,8 +193,7 @@ class CakeRequestTest extends CakeTestCase {
 		$request = new CakeRequest('some/path?one=something&two=else');
 		$expected = array('one' => 'something', 'two' => 'else');
 		$this->assertEquals($expected, $request->query);
-		$this->assertEquals('some/path', $request->url);
-		$this->assertStringEndsWith('/some/path?one=something&two=else', $request->here());
+		$this->assertEquals('some/path?one=something&two=else', $request->url);
 	}
 
 /**

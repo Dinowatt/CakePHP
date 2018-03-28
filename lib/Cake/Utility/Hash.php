@@ -43,18 +43,16 @@ class Hash {
  * @link http://book.cakephp.org/2.0/en/core-utility-libraries/hash.html#Hash::get
  */
 	public static function get(array $data, $path, $default = null) {
-		if (empty($data) || $path === null) {
+		if (empty($data) || $path === '' || $path === null) {
 			return $default;
 		}
 		if (is_string($path) || is_numeric($path)) {
 			$parts = explode('.', $path);
-		} elseif (is_bool($path) || $path === null) {
-			$parts = array($path);
 		} else {
 			if (!is_array($path)) {
 				throw new InvalidArgumentException(__d('cake_dev',
-					'Invalid path parameter: %s, should be dot separated path or array.',
-					var_export($path, true)
+					'Invalid Parameter %s, should be dot separated path or array.',
+					$path
 				));
 			}
 			$parts = $path;
@@ -573,7 +571,7 @@ class Hash {
  * @return bool
  */
 	protected static function _filter($var) {
-		if ($var === 0 || $var === 0.0 || $var === '0' || !empty($var)) {
+		if ($var === 0 || $var === '0' || !empty($var)) {
 			return true;
 		}
 		return false;

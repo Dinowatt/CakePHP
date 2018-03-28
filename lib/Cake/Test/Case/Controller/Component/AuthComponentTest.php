@@ -1429,23 +1429,6 @@ class AuthComponentTest extends CakeTestCase {
 	}
 
 /**
- * test that logout removes the active user data as well for stateless auth
- *
- * @return void
- */
-	public function testLogoutRemoveUser() {
-		$oldKey = AuthComponent::$sessionKey;
-		AuthComponent::$sessionKey = false;
-		$this->Auth->login(array('id' => 1, 'username' => 'mariano'));
-		$this->assertSame('mariano', $this->Auth->user('username'));
-
-		$this->Auth->logout();
-		AuthComponent::$sessionKey = $oldKey;
-
-		$this->assertNull($this->Auth->user('username'));
-	}
-
-/**
  * Logout should trigger a logout method on authentication objects.
  *
  * @return void
@@ -1667,20 +1650,6 @@ class AuthComponentTest extends CakeTestCase {
 
 		Configure::write('App', $App);
 		Router::reload();
-	}
-
-/**
- * Test that redirectUrl() returns '/' if loginRedirect is empty
- * and Auth.redirect is the login page.
- *
- * @return void
- */
-	public function testRedirectUrlWithoutLoginRedirect() {
-		$this->Auth->loginRedirect = null;
-		$this->Auth->Session->write('Auth.redirect', '/users/login');
-		$this->Auth->request->addParams(Router::parse('/users/login'));
-		$result = $this->Auth->redirectUrl();
-		$this->assertEquals('/', $result);
 	}
 
 /**

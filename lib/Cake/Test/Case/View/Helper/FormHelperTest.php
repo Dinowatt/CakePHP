@@ -592,7 +592,7 @@ class FormHelperTest extends CakeTestCase {
 			'div' => array('style' => 'display:none;'),
 			array('input' => array('type' => 'hidden', 'name' => '_method', 'value' => 'POST')),
 			array('input' => array(
-				'type' => 'hidden', 'name' => 'data[_Token][key]', 'value' => 'testKey', 'id', 'autocomplete'
+				'type' => 'hidden', 'name' => 'data[_Token][key]', 'value' => 'testKey', 'id'
 			)),
 			'/div'
 		);
@@ -708,13 +708,11 @@ class FormHelperTest extends CakeTestCase {
 				'type' => 'hidden', 'name' => 'data[_Token][fields]',
 				'value' => $hash, 'id' => 'preg:/TokenFields\d+/',
 				'form' => 'MyTestForm',
-				'autocomplete' => 'off',
 			)),
 			array('input' => array(
 				'type' => 'hidden', 'name' => 'data[_Token][unlocked]',
 				'value' => '', 'id' => 'preg:/TokenUnlocked\d+/',
 				'form' => 'MyTestForm',
-				'autocomplete' => 'off',
 			)),
 			'/div'
 		);
@@ -879,13 +877,11 @@ class FormHelperTest extends CakeTestCase {
 			'div' => array('style' => 'display:none;'),
 			array('input' => array(
 				'type' => 'hidden', 'name' => 'data[_Token][fields]',
-				'value' => $hash, 'id' => 'preg:/TokenFields\d+/',
-				'autocomplete' => 'off',
+				'value' => $hash, 'id' => 'preg:/TokenFields\d+/'
 			)),
 			array('input' => array(
 				'type' => 'hidden', 'name' => 'data[_Token][unlocked]',
-				'value' => '', 'id' => 'preg:/TokenUnlocked\d+/',
-				'autocomplete' => 'off',
+				'value' => '', 'id' => 'preg:/TokenUnlocked\d+/'
 			)),
 			'/div'
 		);
@@ -928,13 +924,11 @@ class FormHelperTest extends CakeTestCase {
 			'div' => array('style' => 'display:none;'),
 			array('input' => array(
 				'type' => 'hidden', 'name' => 'data[_Token][fields]',
-				'value' => 'preg:/.+/', 'id' => 'preg:/TokenFields\d+/',
-				'autocomplete' => 'off',
+				'value' => 'preg:/.+/', 'id' => 'preg:/TokenFields\d+/'
 			)),
 			array('input' => array(
 				'type' => 'hidden', 'name' => 'data[_Token][unlocked]',
-				'value' => 'cancel%7Csave', 'id' => 'preg:/TokenUnlocked\d+/',
-				'autocomplete' => 'off',
+				'value' => 'cancel%7Csave', 'id' => 'preg:/TokenUnlocked\d+/'
 			)),
 			'/div'
 		);
@@ -1050,13 +1044,11 @@ class FormHelperTest extends CakeTestCase {
 			'div' => array('style' => 'display:none;'),
 			array('input' => array(
 				'type' => 'hidden', 'name' => 'data[_Token][fields]',
-				'value' => $hash, 'id' => 'preg:/TokenFields\d+/',
-				'autocomplete' => 'off',
+				'value' => $hash, 'id' => 'preg:/TokenFields\d+/'
 			)),
 			array('input' => array(
 				'type' => 'hidden', 'name' => 'data[_Token][unlocked]',
-				'value' => '', 'id' => 'preg:/TokenUnlocked\d+/',
-				'autocomplete' => 'off',
+				'value' => '', 'id' => 'preg:/TokenUnlocked\d+/'
 			)),
 			'/div'
 		);
@@ -1116,18 +1108,12 @@ class FormHelperTest extends CakeTestCase {
 		$expected = array(
 			'div' => array('style' => 'display:none;'),
 			array('input' => array(
-				'type' => 'hidden', 'name' =>
-				'data[_Token][fields]',
-				'value' => $hash,
-				'id' => 'preg:/TokenFields\d+/',
-				'autocomplete' => 'off'
+				'type' => 'hidden', 'name' => 'data[_Token][fields]',
+				'value' => $hash, 'id' => 'preg:/TokenFields\d+/'
 			)),
 			array('input' => array(
-				'type' => 'hidden',
-				'name' => 'data[_Token][unlocked]',
-				'value' => 'address%7Cfirst_name',
-				'id' => 'preg:/TokenUnlocked\d+/',
-				'autocomplete' => 'off'
+				'type' => 'hidden', 'name' => 'data[_Token][unlocked]',
+				'value' => 'address%7Cfirst_name', 'id' => 'preg:/TokenUnlocked\d+/'
 			)),
 			'/div'
 		);
@@ -1171,18 +1157,12 @@ class FormHelperTest extends CakeTestCase {
 		$expected = array(
 			'div' => array('style' => 'display:none;'),
 			array('input' => array(
-				'type' => 'hidden',
-				'name' => 'data[_Token][fields]',
-				'value' => $hash,
-				'id' => 'preg:/TokenFields\d+/',
-				'autocomplete' => 'off',
+				'type' => 'hidden', 'name' => 'data[_Token][fields]',
+				'value' => $hash, 'id' => 'preg:/TokenFields\d+/'
 			)),
 			array('input' => array(
-				'type' => 'hidden',
-				'name' => 'data[_Token][unlocked]',
-				'value' => 'address%7Cfirst_name',
-				'id' => 'preg:/TokenUnlocked\d+/',
-				'autocomplete' => 'off',
+				'type' => 'hidden', 'name' => 'data[_Token][unlocked]',
+				'value' => 'address%7Cfirst_name', 'id' => 'preg:/TokenUnlocked\d+/'
 			)),
 			'/div'
 		);
@@ -1221,11 +1201,8 @@ class FormHelperTest extends CakeTestCase {
 			'div' => array('style' => 'display:none;'),
 			array('input' => array('type' => 'hidden', 'name' => '_method', 'value' => 'POST')),
 			array('input' => array(
-				'type' => 'hidden',
-				'name' => 'data[_Token][key]',
-				'value' => 'testKey',
-				'id' => 'preg:/Token\d+/',
-				'autocomplete' => 'off',
+				'type' => 'hidden', 'name' => 'data[_Token][key]',
+				'value' => 'testKey', 'id' => 'preg:/Token\d+/'
 			)),
 			'/div'
 		);
@@ -1305,18 +1282,12 @@ class FormHelperTest extends CakeTestCase {
 		$expected = array(
 			'div' => array('style' => 'display:none;'),
 			array('input' => array(
-				'type' => 'hidden',
-				'name' => 'data[_Token][fields]',
-				'value' => $hash,
-				'id' => 'preg:/TokenFields\d+/',
-				'autocomplete' => 'off',
+				'type' => 'hidden', 'name' => 'data[_Token][fields]',
+				'value' => $hash, 'id' => 'preg:/TokenFields\d+/'
 			)),
 			array('input' => array(
-				'type' => 'hidden',
-				'name' => 'data[_Token][unlocked]',
-				'value' => '',
-				'id' => 'preg:/TokenUnlocked\d+/',
-				'autocomplete' => 'off',
+				'type' => 'hidden', 'name' => 'data[_Token][unlocked]',
+				'value' => '', 'id' => 'preg:/TokenUnlocked\d+/'
 			)),
 			'/div'
 		);
@@ -5009,60 +4980,6 @@ class FormHelperTest extends CakeTestCase {
 	}
 
 /**
- * test that select() with numeric label of optiongroup.
- *
- * @return void
- */
-	public function testSelectOptionGroupWithNumericLabel() {
-		$options = array(
-			1 => array(
-				1 => '1Foo',
-				2 => '2Bar',
-				3 => '3Baz',
-				4 => '1',
-				5 => '2',
-				6 => '3',
-				7 => 1,
-				8 => 2,
-				9 => 3,
-			),
-			2 => array(
-				11 => '1Foo',
-				12 => '2Bar',
-				13 => '3Baz',
-				14 => '1',
-				15 => '2',
-				16 => '3',
-				17 => 1,
-				18 => 2,
-				19 => 3,
-			),
-		);
-		$result = $this->Form->select('Model.field', $options, array('empty' => false));
-		$expected = array(
-			'select' => array('name' => 'data[Model][field]', 'id' => 'ModelField'),
-			array('optgroup' => array('label' => '1')),
-			array('option' => array('value' => '1')), '1Foo', '/option',
-			array('option' => array('value' => '2')), '2Bar', '/option',
-			array('option' => array('value' => '3')), '3Baz', '/option',
-			array('option' => array('value' => '6')), '3', '/option',
-			array('option' => array('value' => '9')), '3', '/option',
-			'/optgroup',
-			array('optgroup' => array('label' => '2')),
-			array('option' => array('value' => '11')), '1Foo', '/option',
-			array('option' => array('value' => '12')), '2Bar', '/option',
-			array('option' => array('value' => '13')), '3Baz', '/option',
-			array('option' => array('value' => '14')), '1', '/option',
-			array('option' => array('value' => '16')), '3', '/option',
-			array('option' => array('value' => '17')), '1', '/option',
-			array('option' => array('value' => '19')), '3', '/option',
-			'/optgroup',
-			'/select'
-		);
-		$this->assertTags($result, $expected);
-	}
-
-/**
  * test that select() with optiongroups listens to the escape param.
  *
  * @return void
@@ -8172,14 +8089,14 @@ class FormHelperTest extends CakeTestCase {
 			),
 			array('div' => array('style' => 'display:none;')),
 			array('input' => array('type' => 'hidden', 'name' => '_method', 'value' => 'POST')),
-			array('input' => array('type' => 'hidden', 'name' => 'data[_Token][key]', 'value' => 'testkey', 'id' => 'preg:/Token\d+/', 'autocomplete')),
+			array('input' => array('type' => 'hidden', 'name' => 'data[_Token][key]', 'value' => 'testkey', 'id' => 'preg:/Token\d+/')),
 			'/div',
 			'button' => array('type' => 'submit'),
 			'Delete',
 			'/button',
 			array('div' => array('style' => 'display:none;')),
-			array('input' => array('type' => 'hidden', 'name' => 'data[_Token][fields]', 'value' => 'preg:/[\w\d%]+/', 'id' => 'preg:/TokenFields\d+/', 'autocomplete')),
-			array('input' => array('type' => 'hidden', 'name' => 'data[_Token][unlocked]', 'value' => '', 'id' => 'preg:/TokenUnlocked\d+/', 'autocomplete')),
+			array('input' => array('type' => 'hidden', 'name' => 'data[_Token][fields]', 'value' => 'preg:/[\w\d%]+/', 'id' => 'preg:/TokenFields\d+/')),
+			array('input' => array('type' => 'hidden', 'name' => 'data[_Token][unlocked]', 'value' => '', 'id' => 'preg:/TokenUnlocked\d+/')),
 			'/div',
 			'/form',
 		);
@@ -8300,10 +8217,10 @@ class FormHelperTest extends CakeTestCase {
 				'name', 'id', 'style' => 'display:none;'
 			),
 			array('input' => array('type' => 'hidden', 'name' => '_method', 'value' => 'POST')),
-			array('input' => array('type' => 'hidden', 'name' => 'data[_Token][key]', 'value' => 'test', 'id', 'autocomplete')),
+			array('input' => array('type' => 'hidden', 'name' => 'data[_Token][key]', 'value' => 'test', 'id')),
 			'div' => array('style' => 'display:none;'),
-			array('input' => array('type' => 'hidden', 'name' => 'data[_Token][fields]', 'value' => $hash, 'id', 'autocomplete')),
-			array('input' => array('type' => 'hidden', 'name' => 'data[_Token][unlocked]', 'value' => '', 'id', 'autocomplete')),
+			array('input' => array('type' => 'hidden', 'name' => 'data[_Token][fields]', 'value' => $hash, 'id')),
+			array('input' => array('type' => 'hidden', 'name' => 'data[_Token][unlocked]', 'value' => '', 'id')),
 			'/div',
 			'/form',
 			'a' => array('href' => '#', 'onclick' => 'preg:/document\.post_\w+\.submit\(\); event\.returnValue = false; return false;/'),
@@ -8382,10 +8299,10 @@ class FormHelperTest extends CakeTestCase {
 				'name' => 'preg:/post_\w+/', 'id' => 'preg:/post_\w+/', 'style' => 'display:none;'
 			),
 			array('input' => array('type' => 'hidden', 'name' => '_method', 'value' => 'POST')),
-			array('input' => array('type' => 'hidden', 'name' => 'data[_Token][key]', 'value' => 'testkey', 'id' => 'preg:/Token\d+/', 'autocomplete' => 'off')),
+			array('input' => array('type' => 'hidden', 'name' => 'data[_Token][key]', 'value' => 'testkey', 'id' => 'preg:/Token\d+/')),
 			'div' => array('style' => 'display:none;'),
-			array('input' => array('type' => 'hidden', 'name' => 'data[_Token][fields]', 'value' => 'preg:/[\w\d%]+/', 'id' => 'preg:/TokenFields\d+/', 'autocomplete')),
-			array('input' => array('type' => 'hidden', 'name' => 'data[_Token][unlocked]', 'value' => '', 'id' => 'preg:/TokenUnlocked\d+/', 'autocomplete')),
+			array('input' => array('type' => 'hidden', 'name' => 'data[_Token][fields]', 'value' => 'preg:/[\w\d%]+/', 'id' => 'preg:/TokenFields\d+/')),
+			array('input' => array('type' => 'hidden', 'name' => 'data[_Token][unlocked]', 'value' => '', 'id' => 'preg:/TokenUnlocked\d+/')),
 			'/div',
 			'/form',
 			'a' => array('href' => '#', 'onclick' => 'preg:/document\.post_\w+\.submit\(\); event\.returnValue = false; return false;/'),
@@ -8409,10 +8326,10 @@ class FormHelperTest extends CakeTestCase {
 				'name' => 'preg:/post_\w+/', 'id' => 'preg:/post_\w+/', 'style' => 'display:none;'
 			),
 			array('input' => array('type' => 'hidden', 'name' => '_method', 'value' => 'POST')),
-			array('input' => array('type' => 'hidden', 'name' => 'data[_Token][key]', 'value' => 'testkey', 'id' => 'preg:/Token\d+/', 'autocomplete' => 'off')),
+			array('input' => array('type' => 'hidden', 'name' => 'data[_Token][key]', 'value' => 'testkey', 'id' => 'preg:/Token\d+/')),
 			'div' => array('style' => 'display:none;'),
-			array('input' => array('type' => 'hidden', 'name' => 'data[_Token][fields]', 'value' => 'preg:/[\w\d%]+/', 'id' => 'preg:/TokenFields\d+/', 'autocomplete')),
-			array('input' => array('type' => 'hidden', 'name' => 'data[_Token][unlocked]', 'value' => '', 'id' => 'preg:/TokenUnlocked\d+/', 'autocomplete')),
+			array('input' => array('type' => 'hidden', 'name' => 'data[_Token][fields]', 'value' => 'preg:/[\w\d%]+/', 'id' => 'preg:/TokenFields\d+/')),
+			array('input' => array('type' => 'hidden', 'name' => 'data[_Token][unlocked]', 'value' => '', 'id' => 'preg:/TokenUnlocked\d+/')),
 			'/div',
 			'/form',
 			'a' => array('href' => '#', 'onclick' => 'preg:/document\.post_\w+\.submit\(\); event\.returnValue = false; return false;/'),
@@ -10729,106 +10646,6 @@ class FormHelperTest extends CakeTestCase {
 			'label' => false,
 		);
 		$this->assertEquals($expected, $result);
-	}
-
-/**
- * Tests `_lastAction`.
- *
- *  With named, numeric value
- *
- * @return void
- */
-	public function testLastActionWithNamedNumeric() {
-		$here = '/users/index/page:1';
-
-		$this->Form->request->here = $here;
-		$this->Form->create('User');
-
-		$this->assertAttributeEquals($here, '_lastAction', $this->Form, "_lastAction shouldn't be empty.");
-	}
-
-/**
- * Tests `_lastAction`.
- *
- *  With named, string value
- *
- * @return void
- */
-	public function testLastActionWithNamedString() {
-		$here = '/users/index/foo:bar';
-
-		$this->Form->request->here = $here;
-		$this->Form->create('User');
-
-		$this->assertAttributeEquals($here, '_lastAction', $this->Form, "_lastAction shouldn't be empty.");
-	}
-
-/**
- * Tests the 'errorClass' option when error is returned.
- *
- * @return void
- */
-	public function testInputErrorClass() {
-		$Contact = ClassRegistry::getObject('Contact');
-		$Contact->validationErrors['field'] = array('Badness!');
-
-		$result = $this->Form->input('Contact.field', array(
-			'type' => 'text',
-			'div' => array('errorClass' => 'has-error')
-		));
-		$expected = array(
-			'div' => array('class' => 'input text has-error'),
-			'label' => array('for' => 'ContactField'),
-			'Field',
-			'/label',
-			'input' => array(
-				'type' => 'text', 'name' => 'data[Contact][field]',
-				'id' => 'ContactField', 'class' => 'form-error'
-			),
-			array('div' => array('class' => 'error-message')),
-			'Badness!',
-			'/div'
-		);
-		$this->assertTags($result, $expected);
-
-		$result = $this->Form->input('Contact.field', array(
-			'type' => 'text',
-			'error' => array('attributes' => array('class' => 'error'))
-		));
-		$expected = array(
-			'div' => array('class' => 'input text error'),
-			'label' => array('for' => 'ContactField'),
-			'Field',
-			'/label',
-			'input' => array(
-				'type' => 'text', 'name' => 'data[Contact][field]',
-				'id' => 'ContactField', 'class' => 'form-error'
-			),
-			array('div' => array('class' => 'error')),
-			'Badness!',
-			'/div'
-		);
-		$this->assertTags($result, $expected);
-
-		$result = $this->Form->input('Contact.field', array(
-			'type' => 'text',
-			'div' => array('errorClass' => 'has-error'),
-			'error' => array('attributes' => array('class' => 'form-control-feedback'))
-		));
-		$expected = array(
-			'div' => array('class' => 'input text has-error'),
-			'label' => array('for' => 'ContactField'),
-			'Field',
-			'/label',
-			'input' => array(
-				'type' => 'text', 'name' => 'data[Contact][field]',
-				'id' => 'ContactField', 'class' => 'form-error'
-			),
-			array('div' => array('class' => 'form-control-feedback')),
-			'Badness!',
-			'/div'
-		);
-		$this->assertTags($result, $expected);
 	}
 
 }

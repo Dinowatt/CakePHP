@@ -8,5 +8,5 @@
     $this->end();
 ?>
 
-    <p>je suis dans ma vue Client, action <b>index()</b></p>
+    <p>je suis dans ma vue Client, action <b>ajout()</b></p>
 <?= "c'est fini"?>
